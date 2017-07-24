@@ -26,8 +26,8 @@ public class BattleManager {
                 handleShowTeams();
             } else if (mainOption.startsWith("3.")) {
                 handleDeleteTeams();
-            } else if (mainOption.startsWith("3.")) {
-                handleDeleteTeams();
+            } else if (mainOption.startsWith("4.")) {
+                handleFight();
             }
         } while (!"0".equals(mainOption));
     }
@@ -38,9 +38,9 @@ public class BattleManager {
             battleParticipantOption = battleMenu.getBatlleParticipantSubMenu(mainOption);
             if (!"0".equals(battleParticipantOption)) {
                 final BattleParticipant battleParticipant = BattleParticipantsFactory.createBattleParticipants(mainOption, battleParticipantOption);
-                int totalPower = battleParticipantDAO.getTotalPower(battleParticipant.getFaction());
-                if (totalPower + battleParticipant.getPower() > BattleConstants.TOTAL_POWER) {
-                    System.err.printf("El Participante %s supera el poder máximo permitido por equipo %d \n", battleParticipant, BattleConstants.TOTAL_POWER);
+                int totalPointCost = battleParticipantDAO.getTotalPointCost(battleParticipant.getFaction());
+                if (totalPointCost + battleParticipant.getPointCost() > BattleConstants.BATTLE_POINTS) {
+                    System.err.printf("El Participante %s supera el poder máximo permitido por equipo %d \n", battleParticipant, BattleConstants.BATTLE_POINTS);
                     System.err.printf("El paricipante no ha sido guardado \n");
                 } else {
                     battleParticipantDAO.save(battleParticipant);
@@ -70,6 +70,7 @@ public class BattleManager {
         List<BattleParticipant> rebels = battleParticipantDAO.findByFaction(Faction.REBELS);
         List<BattleParticipant> empires = battleParticipantDAO.findByFaction(Faction.EMPIRE);
         Battle battle = new Battle(empires, rebels);
+        System.out.println(battle.fight());
 
     }
 

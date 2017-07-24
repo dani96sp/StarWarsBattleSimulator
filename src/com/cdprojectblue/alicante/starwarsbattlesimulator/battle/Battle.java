@@ -13,7 +13,9 @@ public class Battle {
 		this.rebels = rebels;
 	}
 
-	public void fight() {}
+	public BattleResult fight() {
+		return null;
+	}
 
 	
 }

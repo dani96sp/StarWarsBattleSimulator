@@ -2,7 +2,6 @@ package com.cdprojectblue.alicante.starwarsbattlesimulator.menu;
 
 import com.cdprojectblue.alicante.starwarsbattlesimulator.constants.BattleConstants;
 import com.cdprojectblue.alicante.starwarsbattlesimulator.dao.BattleParticipantDAO;
-import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.abstractClasses.BattleParticipant;
 import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums.Faction;
 import com.cdprojectblue.alicante.starwarsbattlesimulator.util.UIUtils;
 
@@ -88,7 +87,7 @@ public class BattleMenu {
     }
 
     private void printTeamStatus(Faction faction){
-        System.out.printf("%d/%d", battleParticipantDAO.getTotalPower(faction), BattleConstants.TOTAL_POWER);
+        System.out.printf("%d/%d", battleParticipantDAO.getTotalPointCost(faction), BattleConstants.BATTLE_POINTS);
     }
 
     private String getMainOption() {

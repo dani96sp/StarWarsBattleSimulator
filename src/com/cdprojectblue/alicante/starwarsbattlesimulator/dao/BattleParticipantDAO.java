@@ -58,12 +58,12 @@ public class BattleParticipantDAO {
      *
      * @return the total power
      */
-    public int getTotalPower(final Faction faction) {
-        int totalPower = 0;
+    public int getTotalPointCost(final Faction faction) {
+        int totalPointCost = 0;
         for (BattleParticipant bp : this.findByFaction(faction)) {
-            totalPower += bp.getPower();
+            totalPointCost += bp.getPointCost();
         }
-        return totalPower;
+        return totalPointCost;
     }
 
     /**
