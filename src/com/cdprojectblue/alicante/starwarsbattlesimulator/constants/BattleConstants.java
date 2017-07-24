@@ -1,7 +1,9 @@
 package com.cdprojectblue.alicante.starwarsbattlesimulator.constants;
 
 public class BattleConstants {
-
+	
+	public static final int BATTLE_POINTS = 1000;
+	
 	public static final int INFANTRY_HEALTH = 500;
 	public static final int INFANTRY_POWER = 100;
 	public static final int INFANTRY_COST = 100;
