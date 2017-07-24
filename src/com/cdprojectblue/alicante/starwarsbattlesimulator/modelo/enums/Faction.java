@@ -1,6 +1,6 @@
 package com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums;
 
-public enum Factions {
+public enum Faction {
 	REBELS, EMPIRE
 
 }

@@ -2,7 +2,7 @@ package com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.battleparticip
 
 import com.cdprojectblue.alicante.starwarsbattlesimulator.constants.BattleConstants;
 import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.abstractClasses.Infantry;
-import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums.Factions;
+import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums.Faction;
 
 public class Sith extends Infantry {
 
@@ -12,7 +12,7 @@ public class Sith extends Infantry {
 		this.setHealth(BattleConstants.INFANTRY_HEALTH);
 		this.setPower(BattleConstants.INFANTRY_POWER);
 		this.setPointCost(BattleConstants.INFANTRY_COST);
-		this.setFaction(Factions.EMPIRE);
+		this.setFaction(Faction.EMPIRE);
 
 	}
 }

@@ -2,7 +2,7 @@ package com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.battleparticip
 
 import com.cdprojectblue.alicante.starwarsbattlesimulator.constants.BattleConstants;
 import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.abstractClasses.EarthMachine;
-import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums.Factions;
+import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums.Faction;
 
 public class TurboTank extends EarthMachine{
 	public TurboTank () {
@@ -11,7 +11,7 @@ public class TurboTank extends EarthMachine{
 		this.setHealth(BattleConstants.EARTH_HEALTH);
 		this.setPower(BattleConstants.EARTH_POWER);
 		this.setPointCost(BattleConstants.EARTH_COST);
-		this.setFaction(Factions.REBELS);
+		this.setFaction(Faction.REBELS);
 		
 	}
 }

@@ -13,4 +13,7 @@ public class BattleConstants {
 	public static final int AIR_HEALTH = 300;
 	public static final int AIR_POWER = 200;
 	public static final int AIR_COST = 200;
+
+	public static final int TOTAL_POWER = 200;
+
 }

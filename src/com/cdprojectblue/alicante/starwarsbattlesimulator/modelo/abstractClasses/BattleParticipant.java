@@ -1,11 +1,11 @@
 package com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.abstractClasses;
 
-import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums.Factions;
+import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums.Faction;
 
 public abstract class BattleParticipant {
 	private int power;
 	private int pointCost;
-	private Factions faction;
+	private Faction faction;
 	private int health;
 
 	public int getPower() {
@@ -20,7 +20,7 @@ public abstract class BattleParticipant {
 		return this.health > 0;
 	}
 
-	public Factions getFaction() {
+	public Faction getFaction() {
 		return faction;
 	}
 
@@ -40,7 +40,7 @@ public abstract class BattleParticipant {
 		this.pointCost = pointCost;
 	}
 
-	protected void setFaction(Factions faction) {
+	protected void setFaction(Faction faction) {
 		this.faction = faction;
 	}
 

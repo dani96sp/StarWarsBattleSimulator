@@ -2,7 +2,7 @@ package com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.battleparticip
 
 import com.cdprojectblue.alicante.starwarsbattlesimulator.constants.BattleConstants;
 import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.abstractClasses.AirMachine;
-import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums.Factions;
+import com.cdprojectblue.alicante.starwarsbattlesimulator.modelo.enums.Faction;
 
 public class Tie extends AirMachine{
 	public Tie() {
@@ -11,7 +11,7 @@ public class Tie extends AirMachine{
 		this.setHealth(BattleConstants.AIR_HEALTH);
 		this.setPower(BattleConstants.AIR_POWER);
 		this.setPointCost(BattleConstants.AIR_COST);
-		this.setFaction(Factions.REBELS);
+		this.setFaction(Faction.REBELS);
 		
 	}
 }
